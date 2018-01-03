@@ -6,13 +6,119 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.hickersguide.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="Hiker's Guide"
+            android:textColor="@android:color/background_light"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:text="Hike while you can"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Latitude: 32.3"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/lat"
+            android:layout_below="@+id/lat"
+            android:layout_marginTop="17dp"
+            android:text="Longtitude: 43.9"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/lng"
+            android:layout_below="@+id/lng"
+            android:layout_marginTop="17dp"
+            android:text="Accuracy: 3.0m"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/accuracy"
+            android:layout_below="@+id/accuracy"
+            android:layout_marginTop="20dp"
+            android:text="Speed: 3.9m/s"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/bearing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/speed"
+            android:layout_below="@+id/speed"
+            android:layout_marginTop="17dp"
+            android:text="Bearing: 34"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+        <TextView
+            android:id="@+id/altitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/bearing"
+            android:layout_below="@+id/bearing"
+            android:layout_marginTop="17dp"
+            android:text="Altitude: 34"
+            android:textColor="@android:color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/altitude"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:gravity="center_horizontal"
+            android:text="Address\n some fake address"
+            android:textColor="@android:color/white"
+            android:textSize="28sp" />
+
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
